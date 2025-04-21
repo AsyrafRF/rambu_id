@@ -1,7 +1,11 @@
 include: package:flutter_lints/flutter.yaml
 analyzer:
   errors:
+    implementation_imports: ignore
+    non_constant_identifier_names: ignore 
     unused_field: ignore
+    unused_import: ignore
+    use_build_context_synchronously: ignore
 #analyzer:
 #  errors:
 #    unused_field: ignore

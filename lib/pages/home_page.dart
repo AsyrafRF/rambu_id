@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rambu_id/pages/edukasi/edukasi_page.dart' show EdukasiPage;
 import '../widgets/home_menu_button.dart';
 import 'detection_page.dart';
 import 'edukasi_page.dart';

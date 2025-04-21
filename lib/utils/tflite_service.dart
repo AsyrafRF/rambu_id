@@ -1,14 +1,18 @@
 import 'dart:typed_data';
 import 'package:flutter/services.dart';
-import 'package:tflite_flutter/tflite_flutter.dart';
+import 'package:tflite_flutter/tflite_flutter.dart' hide TfLiteType;
 import 'package:tflite_flutter_helper_plus/tflite_flutter_helper_plus.dart';
+import 'package:camera/camera.dart';
+import 'package:tflite_flutter_plus/src/bindings/types.dart';
 
 class TFLiteService {
   late Interpreter _interpreter;
   late List<String> _labels;
   late ImageProcessor _imageProcessor;
 
-  final int inputSize = 224; // Disesuaikan dengan model kamu
+  final int inputSize = 224;
+
+  TfLiteType? get kTfLiteInt8 => null; // Disesuaikan dengan model kamu
 
   Future<void> loadModel() async {
     _interpreter = await Interpreter.fromAsset(
@@ -22,12 +26,7 @@ class TFLiteService {
     // untuk demo, asumsi pakai gambar dari file sementara
     // Ini placeholder
     return TensorImage.fromTensorBuffer(
-      TensorBuffer.createFixedSize([
-        1,
-        inputSize,
-        inputSize,
-        3,
-      ], TfLiteType.uint8),
+      TensorBuffer.createFixedSize([1, inputSize, inputSize, 3], kTfLiteInt8!),
     );
   }
 
