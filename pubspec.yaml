@@ -9,28 +9,41 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  quiver: ^3.2.1
+
+  # Kamera & Image
+  camera: ^0.10.6
   camera_android: ^0.10.10+2
-  camera: ^0.10.4
   camera_web: ^0.3.5
+  image: ^3.3.0
+
+  # Maps & Lokasi
   flutter_map: ^8.1.1
   google_maps_flutter: ^2.12.1
+  location: ^8.0.0
+  path_provider: ^2.1.5
+
+  # ML Kit (pakai modular, tanpa `google_ml_kit`)
   google_mlkit_object_detection: ^0.15.0
-  tflite_flutter: ^0.11.0
   google_mlkit_image_labeling: ^0.14.1
-  google_ml_kit: ^0.20.0
+
+  # TensorFlow Lite
+  tflite_flutter: ^0.11.0
+  tflite_flutter_helper_plus: ^0.0.2
+  tflite_flutter_plus: ^0.0.1
+
+  # State Management 
   provider: ^6.1.4
   bloc: ^9.0.0
   riverpod: ^2.6.1
+
+  # UI & Animasi
   flutter_animate: ^4.5.2
   flutter_neumorphic: ^3.2.0
   getwidget: ^6.0.0
+
+  # Notifikasi
   flutter_local_notifications: ^19.1.0
-  path_provider: ^2.1.5
-  tflite_flutter_helper_plus: ^0.0.2
-  image: ^3.3.0
-  tflite_flutter_plus: ^0.0.1
-  location: ^8.0.0
-  #tflite_flutter_helper: ^0.3.1
 
 dev_dependencies:
   flutter_test:

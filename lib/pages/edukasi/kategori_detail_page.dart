@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rambu_id/pages/detail_rambu_page.dart';
 
 class KategoriDetailPage extends StatelessWidget {
   final String kategori;
@@ -20,7 +21,12 @@ class KategoriDetailPage extends StatelessWidget {
             title: Text(rambuList[index]),
             subtitle: const Text("Penjelasan singkat rambu..."),
             onTap: () {
-              // TODO: Arahkan ke halaman detail rambu jika diperlukan
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailPage(rambu: rambuList[index]),
+                ),
+              );
             },
           );
         },
